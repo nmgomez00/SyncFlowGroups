@@ -1,11 +1,16 @@
 package db
 
 import (
+	// Bloque 1: Librerías estándar
 	"log"
 	"os"
 
+	// Bloque 2: Librerías de terceros (sqlx, godotenv)
 	"github.com/jmoiron/sqlx"
 	"github.com/joho/godotenv"
+
+	// Bloque 3: Importaciones de drivers (Importación Silenciosa)
+	_ "github.com/lib/pq"
 )
 
 var Database *sqlx.DB
