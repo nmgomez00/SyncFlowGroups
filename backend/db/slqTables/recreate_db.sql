@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS "UserGroupRequest", "UserGroup", "Channel", "Category", "Group", "User";
 
-/*
+
 -- 1. Enum para el estado de la membresía en un grupo (UserGroup)
 CREATE TYPE GroupMembershipStates AS ENUM (
     'PENDING',
@@ -36,7 +36,7 @@ CREATE TYPE ChannelStates AS ENUM (
     'BANNED',
     'LEFT'
 );
-*/
+
 CREATE TABLE "User" (
     id UUID PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
