@@ -1,5 +1,6 @@
 import axios from "axios";
-const API_BASE = import.meta.env.VITE_API_BASE || "http://localhost:8080";
+const API_BASE =
+  import.meta.env.VITE_API_BASE || "https://syncflowgroups.onrender.com";
 export function createUser({ name, email, profilePhotoURL }) {
   return axios
     .post(`${API_BASE}/users`, { name, email, profilePhotoURL })
