@@ -1,7 +1,6 @@
 package db
 
 import (
-	"fmt"
 	"log"
 	"os"
 
@@ -22,15 +21,7 @@ func init() {
 }
 
 func Connect() *sqlx.DB {
-	connStr := fmt.Sprintf(
-		"user=%s password=%s dbname=%s host=%s port=%s sslmode=%s",
-		os.Getenv("DB_USER"),
-		os.Getenv("DB_PASSWORD"),
-		os.Getenv("DB_NAME"),
-		os.Getenv("DB_HOST"),
-		os.Getenv("DB_PORT"),
-		os.Getenv("SSL_MODE"),
-	)
+	connStr := os.Getenv("DB_URL")
 	db, err := sqlx.Connect("postgres", connStr)
 	if err != nil {
 		log.Fatalln("Fallo al conectarse a la base de datos:", err)
