@@ -29,7 +29,7 @@ export default function GroupForm({ onCreated }) {
         <input value={name} onChange={(e) => setName(e.target.value)} required placeholder="Nombre" className="w-full rounded-md border px-3 py-2" />
         <textarea value={description} onChange={(e) => setDescription(e.target.value)} placeholder="Descripcion" className="w-full rounded-md border px-3 py-2" />
         <div className="flex items-center justify-end">
-          <button disabled={loading} className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700">{loading ? 'Creando' : 'Creado'}</button>
+          <button disabled={loading} className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700">{loading ? 'Creando' : 'Crear'}</button>
         </div>
       </div>
     </form>
